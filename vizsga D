@@ -1,0 +1,95 @@
+Vizsga 2018 D modul mérés.
+
+1. feladat:
+ifconfig és ipconfig /all commandok hasznbálatával.
+1. Az alhálózatunk: 192.168.0.0/22
+2. Hostunk IP címe: 192.168.0.104/22
+3. Az alapértelmezett átjárónk: 192.168.0.254
+4. Win szerverünk IP címe: 192.168.1.100
+5. Ubuntu szerverünk IP címe: 192.168.2.156
+
+2. feladat:
+traceroute command használatával.
+1. ÚTVONAL: 192.168.1.100 VÁLASZIDŐK: 0,804 ms 0,724 ms 0,697 ms
+2. 1  192.168.0.254 (192.168.0.254)  0.250 ms  0.197 ms  0.198 ms
+ 2  10.2.0.2 (10.2.0.2)  4.480 ms * *
+ 3  * * *
+ 4  10.1.1.22 (10.1.1.22)  7.851 ms  7.825 ms  7.759 ms
+ 5  * * *
+ 6  catv-80-98-51-254.catv.broadband.hu (80.98.51.254)  14.007 ms  10.720 ms  13.682 ms
+ 7  catv-89-135-214-61.catv.broadband.hu (89.135.214.61)  13.641 ms  14.917 ms  14.871 ms
+ 8  hu-bud03a-rc1-ae46-2035.aorta.net (84.116.242.66)  14.831 ms  14.809 ms  14.705 ms
+ 9  hu-bud05a-ri1-ae15-0.aorta.net (84.116.137.78)  16.452 ms hu-bud05a-ri1-ae12-0.aorta.net (84.116.137.2)  14.684 ms hu-bud05a-ri1-ae15-0.aorta.net (84.116.137.78)  16.413 ms
+10  72.14.209.116 (72.14.209.116)  15.178 ms  15.138 ms  15.103 ms
+11  72.14.238.29 (72.14.238.29)  15.121 ms 72.14.238.101 (72.14.238.101)  15.100 ms 72.14.238.27 (72.14.238.27)  15.104 ms
+12  google-public-dns-a.google.com (8.8.8.8)  13.432 ms  13.384 ms  15.530 ms
+3.1  192.168.0.254 (192.168.0.254)  0.244 ms  0.201 ms  0.168 ms
+ 2  10.2.0.2 (10.2.0.2)  2.910 ms * *
+ 3  * * *
+ 4  10.1.1.22 (10.1.1.22)  5.883 ms  5.883 ms  5.841 ms
+ 5  * * *
+ 6  catv-80-98-51-254.catv.broadband.hu (80.98.51.254)  21.433 ms  26.864 ms  26.775 ms
+ 7  catv-89-135-214-61.catv.broadband.hu (89.135.214.61)  26.817 ms  14.967 ms  14.950 ms
+ 8  hu-bud03a-rc1-ae46-2035.aorta.net (84.116.242.66)  16.617 ms  16.598 ms  16.524 ms
+ 9  hu-bud06a-ri1-ae14-0.aorta.net (84.116.137.202)  14.808 ms  14.778 ms hu-bud06a-ri1-ae4-0.aorta.net (84.116.137.14)  14.738 ms
+10  bpt-b4-link.telia.net (213.248.70.253)  16.396 ms  16.308 ms  21.289 ms
+11  dravanet-ic-324273-bpt-b4.c.telia.net (62.115.153.5)  21.291 ms  21.261 ms  23.769 ms
+12  62.112.213.207 (62.112.213.207)  23.741 ms  23.686 ms  22.899 ms
+13  62.112.213.207 (62.112.213.207)  22.863 ms  17.950 ms  17.874 ms
+
+3. feladat:
+speedtest parancsal
+apt install speedtest
+speedtest
+Retrieving speedtest.net configuration...
+Retrieving speedtest.net server list...
+Testing from UPC Magyarorszag (89.135.98.64)...
+Selecting best server based on latency...
+Hosted by ATW Internet Kft. (Budapest) [2.50 km]: 46.361 ms
+Testing download speed........................................
+Download: 68.11 Mbit/s
+Testing upload speed..................................................
+Upload: 11.53 Mbit/s
+
+4. és 5. feladat:
+nmap parancs használata. nmap -r IP
+1. Host nyitott portok: 22/tcp ssh
+2. Win Server: 
+53/tcp    domain
+88/tcp    kerberos-sec
+135/tcp   msrpc
+139/tcp   netbios-ssn
+389/tcp   ldap
+445/tcp   microsoft-ds
+464/tcp   kpasswd5
+593/tcp   http-rpc-epmap
+636/tcp   ldapssl
+3268/tcp  globalcatLDAP
+3269/tcp  globalcatLDAPssl
+49152/tcp <ismeretlen>
+49153/tcp 
+49154/tcp 
+49155/tcp 
+49157/tcp 
+49158/tcp 
+49176/tcp </ismeretlen>
+3. Linux server : 22/tcp ssh
+4. Átjáró:
+22/tcp  ssh
+53/tcp  domain
+80/tcp  http
+666/tcp doom
+5. 8.8.8.8:
+53/tcp  domain
+443/tcp https
+
+6. feladat
+arp command használata #arp
+192.168.0.254            ether   c8:3a:35:d4:43:da   C                     enp2s0
+192.168.0.100            ether   d8:cb:8a:38:5d:24   C                     enp2s0
+192.168.2.156            ether   08:00:27:c3:39:7d   C                     enp2s0
+192.168.1.100            ether   08:00:27:37:15:3f   C                     enp2s0
+
+
+
+
